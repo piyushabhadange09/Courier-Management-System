@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Delivery Staff</title>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #87CEEB, #B0E0E6); /* Sky blue gradient */
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+        max-width: 450px;
+        width: 100%;
+        transition: transform 0.3s ease;
+      }
+
+      form:hover {
+        transform: scale(1.02); /* Slight scale effect on hover */
+      }
+
+      div {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #444; /* Softer label color for better contrast */
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #87CEEB; /* Sky blue border */
+        border-radius: 6px;
+        font-size: 16px;
+        background-color: #f0f8ff; /* Very light blue background */
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="tel"]:focus {
+        border-color: #4682B4; /* Darker blue on focus */
+        outline: none;
+        box-shadow: 0 4px 12px rgba(70, 130, 180, 0.3); /* Light blue shadow on focus */
+        background-color: #e6f7ff; /* Slightly darker blue when focused */
+      }
+
+      button[type="submit"] {
+       background-color: #4798da;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #225986; /* Darker sky blue on hover */
+        transform: translateY(-3px);
+      }
+
+      button[type="submit"]:active {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/orgLogin/deliveryStaff" method="POST">
+      <div>
+        <label for="staffId">Organization Name:</label>
+        <input type="text" id="staffId" name="orgName" required />
+      </div>
+      <div>
+        <label for="staffId">Staff ID:</label>
+        <input type="text" id="staffId" name="staffId" required />
+      </div>
+      <div>
+        <label for="staffName">Staff Name:</label>
+        <input type="text" id="staffName" name="staffName" required />
+      </div>
+      <div>
+        <label for="staffCity">Staff City:</label>
+        <input type="text" id="staffCity" name="staffCity" required />
+      </div>
+      <div>
+        <label for="staffContact">Staff Contact Number:</label>
+        <input type="tel" id="staffContact" name="staffContact" pattern="[0-9]{10}" required />
+      </div>
+      <div>
+        <label for="staffEmail">Staff Email:</label>
+        <input type="email" id="staffEmail" name="staffEmail" required />
+      </div>
+      <div>
+        <button type="submit"style="background-color:blue">Register Staff</button>
+      </div>
+      <div>
+        <a href="/orgLogin/ViewAllStaff"style="margin-top:10px;padding-bottom:-20px">View All Delivery Staff List</a>
+      </div>
+    </form>
+  </body>
+</html>

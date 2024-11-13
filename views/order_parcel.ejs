@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Parcel</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif; /* Clean and modern font */
+        background-color: #f4f9ff; /* Light background for contrast */
+        color: #333;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .parcel-container {
+        width: 70%;
+        margin: 30px auto;
+        background-color: #ffffff; /* White background for the main container */
+        padding: 40px;
+        border-radius: 15px; /* Rounded corners */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Strong shadow for depth */
+      }
+
+      .parcel-container h1 {
+        font-size: 36px;
+        color: #007bff; /* Primary theme color */
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      .parcel-item {
+        padding: 20px;
+        margin-bottom: 20px; /* Space between parcel items */
+        border-radius: 10px; /* Rounded corners */
+        background-color: #e7f3ff; /* Light blue background for parcel items */
+        color: #333; /* Dark text for readability */
+        transition: box-shadow 0.3s ease, transform 0.3s; /* Transition effects */
+      }
+
+      .parcel-item:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+        transform: translateY(-2px); /* Slight lift effect on hover */
+      }
+
+      .parcel-item p {
+        font-size: 18px;
+        margin: 8px 0; /* Space between paragraphs */
+        line-height: 1.5; /* Increased line height for readability */
+      }
+
+      .parcel-item p strong {
+        font-weight: bold; /* Bold text for strong elements */
+      }
+
+      .parcel-item:last-child {
+        margin-bottom: 0; /* Remove margin from last item */
+      }
+
+      @media (max-width: 768px) {
+        .parcel-container {
+          width: 90%; /* Full width on smaller screens */
+          padding: 30px; /* Adjust padding */
+        }
+
+        .parcel-container h1 {
+          font-size: 28px; /* Smaller font size for heading */
+        }
+
+        .parcel-item p {
+          font-size: 16px; /* Smaller font size for paragraphs */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parcel-container">
+      <h1>Parcel Details</h1>
+
+      <div class="parcel-item">
+        <p><strong>Parcel ID:</strong> 3567</p>
+        <p><strong>Parcel Weight:</strong> 2.5 kg</p>
+        <p><strong>Parcel Category:</strong> Electronics</p>
+        <p><strong>Parcel Cost:</strong> $150.00</p>
+        <p><strong>Net Quantity:</strong> 1</p>
+      </div>
+
+      <div class="parcel-item">
+        <p><strong>Parcel ID:</strong> 3568</p>
+        <p><strong>Parcel Weight:</strong> 1.2 kg</p>
+        <p><strong>Parcel Category:</strong> Clothing</p>
+        <p><strong>Parcel Cost:</strong> $80.00</p>
+        <p><strong>Net Quantity:</strong> 2</p>
+      </div>
+
+      <div class="parcel-item">
+        <p><strong>Parcel ID:</strong> 3569</p>
+        <p><strong>Parcel Weight:</strong> 5.0 kg</p>
+        <p><strong>Parcel Category:</strong> Books</p>
+        <p><strong>Parcel Cost:</strong> $40.00</p>
+        <p><strong>Net Quantity:</strong> 3</p>
+      </div>
+    </div>
+  </body>
+</html>

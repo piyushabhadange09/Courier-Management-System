@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organization Registration</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  background: #69ac6b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 70%;
+  max-width: 900px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Gap between rows and columns */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button {
+  grid-column: span 2; /* Button spans both columns */
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.login-link {
+  grid-column: span 2; /* Link spans both columns */
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="register-form">
+    <h2 style="color: #4CAF50;">Organization Registration</h2>
+    <form action="/orgRegsister" method="POST">
+      <!-- Column 1 -->
+      <div class="column">
+        <label for="org_name">Organization Name:</label>
+        <input type="text" id="org_name" name="org_name" placeholder="Enter Organization Name" required>
+
+        <label for="org_email">Organization Email:</label>
+        <input type="email" id="org_email" name="org_email" placeholder="Enter Organization Email" required>
+
+        <label for="org_contact">Organization Contact:</label>
+        <input type="tel" id="org_contact" name="org_contact" placeholder="Enter Organization Contact" required>
+
+        <label for="org_headOffice">Head Office Address:</label>
+        <input type="text" id="org_headOffice" name="org_headOffice" placeholder="Enter Head Office Address" required>
+
+      </div>
+      <!-- Column 2 -->
+      <div class="column">
+        <label for="org_password">Organization Password:</label>
+        <input type="password" id="org_password" name="org_password" placeholder="Enter Organization Password" required>
+
+        <label for="org_pincode">Pincode:</label>
+        <input type="text" id="org_pincode" name="org_pincode" placeholder="Enter Pincode" required>
+
+        <label for="org_manager_name">Manager Name:</label>
+        <input type="text" id="org_manager_name" name="org_manager_name" placeholder="Enter Manager Name" required>
+
+        <label for="manager_email">Manager Email:</label>
+        <input type="email" id="manager_email" name="manager_email" placeholder="Enter Manager Email" required>
+
+        <label for="manager_contact">Manager Contact:</label>
+        <input type="tel" id="manager_contact" name="manager_contact" placeholder="Enter Manager Contact" required>
+      </div>
+
+      <button type="submit">Register Organization</button>
+    </form>
+
+    <div class="login-link">
+      <p>Already registered? <a href="/orgLogin"style="color:#4CAF50">Login here</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

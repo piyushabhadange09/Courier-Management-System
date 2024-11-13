@@ -1,0 +1,246 @@
+/* General Body Styles */
+
+.front body {
+    font-family: 'Arial', sans-serif; /* Font family for the page */
+    background-color: #121212; /* Dark background color */
+    color: #b65555; /* Light grey text color for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container Styles */
+.front  .main-container {
+    padding: 40px; /* Padding for the main container */
+
+}
+
+
+/* Intro Class Styles */
+.front .intro-class {
+    margin-bottom: 40px; 
+    position: relative;
+}
+.front .intro-class::before {
+    content: ''; /* Required to show the pseudo-element */
+    position: absolute; /* Positioning relative to the parent */
+    left: 0; /* Position on the left */
+    /* top: 50%; Center vertically */
+    transform: translateY(-50%); 
+    width: 100%; /* Set width of the image */
+    height: 230%; /* Set height of the image */
+    background-image: url('../IMG/intro-section.png'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* Highlight Text Styles */
+.front  .highlight {
+    /* Bright color for highlighted text */
+    color: #501807;
+    font-weight: bold; /* Bold for emphasis */
+    font-size: 50px;
+    display: inline-block;
+}
+.front .main-moto{
+    color: #a1523a;
+    font-size: 60px;
+    display: flex;
+}
+
+/* Normal Text Styles */
+.front  .normal-text {
+    color: #063634; /* Light grey text for readability */
+}
+
+/* Button Styles */
+.front  .buttons-div {
+    margin-top: 20px; /* Space above buttons */
+}
+
+.front button.login {
+    background-color: #cc3a0e; /* Button background color */
+    color: rgb(22, 19, 19); /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside buttons */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor change on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.front  button.login:hover {
+    background-color: #772006; /* Darker shade on hover */
+}
+
+/* Section Image Styles */
+.front .section-image {
+    margin: 20px 0; /* Margin above and below the section image */
+}
+
+/* Intro Section Styles */
+.front .intro-section {
+    display: flex; /* Flex layout for intro sections */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Margin below intro section */
+     
+}
+.intro-section-main{
+    background-color: #bb7e7e;
+}
+.front .intro-text {
+    flex: 1; /* Take available space */
+    margin: 0 20px; /* Margin on sides */
+}
+.front .intro-text h1{
+    flex: 1; /* Take available space */
+    /* Margin on sides */
+    font-size: 30px;
+    color: rgb(73, 63, 6);
+    text-shadow: 2px 3px 8px rgb(100, 71, 71) ;
+}
+.front .intro-text p{
+    flex: 1; /* Take available space */
+    /* Margin on sides */
+    font-size: 10px;
+    color: rgb(36, 33, 21);
+    
+}
+.front .intro-img img {
+    width: 300px; /* Responsive image */
+    height: 300px;
+    border-radius: 50%; /* Rounded corners for images */
+    margin: 20px 20px;
+    box-shadow: 3px 5px 10px white;
+    transition: box-shadow 0.1s ease;
+}
+
+/* More About Button Styles */
+.front .more-about {
+    text-align: center; /* Center button */
+    margin-top: 20px; /* Space above button */
+}
+
+.front .button-89 {
+    background-color: #ff5722; /* Button background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside button */
+    font-size: 20px; /* Font size */
+    cursor: pointer; /* Cursor change on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.front .button-89:hover {
+    background-color: #e64a19; /* Darker shade on hover */
+}
+
+/* Reviews Carousel Styles */
+.front .carousel-wrapper {
+    background-color: #1e1e1e; /* Dark background for carousel */
+    padding: 20px; 
+    margin: -40px 40px;
+    
+}
+
+
+.front .bold-text {
+    color: #ff5722; /* Bright color for bold text */
+    text-align: center; /* Center text */
+}
+
+.front .carousel-container {
+    display: flex; /* Flex layout for carousel items */
+    overflow-x: auto; /* Horizontal scroll for items */
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+    margin: 0 20px;
+}
+
+/* Carousel Item Styles */
+.front .carousel-item {
+    flex: 0 0 300px; /* Fixed width for items */
+    margin: 0 10px; /* Spacing between items */
+    background-color: #2c2c2c; /* Dark background for items */
+    border-radius: 10px; /* Rounded corners for items */
+    padding: 15px; /* Padding inside items */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    scroll-snap-align: start; /* Snap alignment */
+}
+.carousel {
+    display: flex; /* Use flexbox for horizontal layout */
+    transition: transform 0.5s ease; /* Smooth transition for sliding */
+}
+.front .carousel-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* User Info Styles */
+.front .user-info {
+    display: flex; /* Flexbox for user info */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 10px; /* Space below user info */
+}
+
+.front .circle {
+    width: 50px; /* Circle size */
+    height: 50px; /* Circle size */
+    background-color: #ff5722; /* Bright color for initials */
+    border-radius: 50%; /* Circle shape */
+    color: white; /* White text color */
+    display: flex; /* Flexbox for center alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    font-weight: bold; /* Bold text for initials */
+    margin-right: 10px; /* Space between circle and name */
+}
+
+/* User Name Styles */
+.front .user-name {
+    font-weight: 600; /* Semi-bold user name */
+    color: #E0E0E0; /* Light color for readability */
+}
+.bold-text{
+    padding-top: 10px;
+}
+/* Review and Rating Styles */
+.front .user-review {
+    font-style: italic; /* Italicize review text */
+    color: #B0BEC5; /* Light grey text color for reviews */
+    margin: 10px 0; /* Space above and below reviews */
+}
+
+.front .user-rating {
+    font-weight: bold; /* Bold for ratings */
+    color: #ff5722; /* Bright color for ratings */
+}
+
+/* Social Media Styles */
+.front .social-media {
+    text-align: center; /* Center social media section */
+    margin: 00px 40px; /* Margin above and below */
+    margin-bottom: -20px;
+    background-color: #1e1e1e;
+
+}
+
+.front .social-media a {
+   
+    margin: 20px 30px; /* Space between social media icons */
+}
+
+.front .social-media i {
+    color: #E0E0E0; /* Light grey color for icons */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.front .social-media i:hover {
+    color: #ff5722; /* Change color on hover */
+}
+
+

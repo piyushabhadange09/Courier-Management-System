@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+    body{
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ff6f61, #ff9478);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .register-form {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 350px;
+    }
+    .register-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff6f61;
+    }
+    .register-form label {
+      font-weight: bold;
+      color: #333;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .register-form input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+      background-color: #f9f9f9;
+      transition: background-color 0.3s;
+    }
+    .register-form input:focus {
+      background-color: #f0f0f0;
+      outline: none;
+      border-color: #ff6f61;
+    }
+    .register-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .register-form button:hover {
+      background-color: #ff4b47;
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .login-link a {
+      text-decoration: none;
+      color: #ff6f61;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .login-link a:hover {
+      color: #ff4b47;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-form">
+    <h2>Register</h2>
+    <form action="/userRegsister" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter Username"required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter Password"required>
+
+      <label for="password">Confirm Password:</label>
+      <input type="password" id="confirm-password"name="confirm_password" placeholder="Enter Confirm Password"required>
+
+      <label for="email_id">Email ID:</label>
+      <input type="email" id="email_id" name="email_id" required placeholder="Enter Email-id">
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required placeholder="Enter City Name">
+
+      <label for="phone_number">Phone Number:</label>
+      <input type="tel" id="phone_number" name="phone_number" required placeholder="Enter Phone Number">
+
+      <button type="submit">Register</button>
+
+      <div class="login-link">
+        <p>Already registered? <a href="/userLogin">Login here</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Courier Management System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/about.css">
+</head>
+<body>
+
+    <%- include('header') %>
+<div class="about">
+
+    <div class="about-section">
+        <div class="about-info">
+            <p>"Delivering your packages, connecting you to the world."</p>
+            <h1>Welcome to Courier Connect, where delivery meets efficiency! Our service is designed to revolutionize how you send and receive packages. Here's why you'll love Courier Connect:</h1>
+        </div>
+        <div class="about-items">
+            <div class="short-card">
+                <img src="/static-img/fast-delivery.png" alt="" class="short-card-img">
+                <h1><span>🚀 Fast Delivery</span> Experience quick and reliable delivery services that get your packages to their destinations on time.</h1>
+            </div>
+    
+            <div class="short-card">
+                <img src="/static-img/tracking.png" alt="" class="short-card-img">
+                <h1><span>📦 Real-time Tracking</span> Keep an eye on your packages with our real-time tracking system, providing updates every step of the way.</h1>
+            </div>
+    
+            <div class="short-card">
+                <img src="/static-img/global-service.png" alt="" class="short-card-img">
+                <h1><span>🌍 Global Service</span> Whether local or international, our courier service ensures your packages reach their global destinations.</h1>
+            </div>
+    
+            <div class="short-card">
+                <img src="/static-img/secure-delivery.png" alt="" class="short-card-img">
+                <h1><span>🔒 Secure Delivery</span> Your packages are safe with us! We prioritize security and ensure every delivery is protected.</h1>
+            </div>
+    
+            <div class="short-card">
+                <img src="/static-img/user-friendly.png" alt="" class="short-card-img">
+                <h1><span>✨ User-friendly Interface</span> Easily navigate our platform with an intuitive design, making booking and tracking a breeze.</h1>
+            </div>
+    
+            <div class="short-card">
+                <img src="/static-img/customer-support.png" alt="" class="short-card-img">
+                <h1><span>🤝 24/7 Customer Support</span> Our dedicated team is here to assist you at any time with all your courier needs.</h1>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    
+    <div class="about-data" style="padding-bottom:80px;padding-top:100px">
+        <p>Join the Courier Connect community today and</p>
+        <p>experience a world of seamless delivery services.</p>
+        <span>Login and Sign Up Now!</span>
+        <div class="buttons-div">
+            <button class="login" role="button"><a href="/loginRoute" style="text-decoration:none;color:  rgb(238, 235, 237);">Login</a></button>
+            <button class="login" role="button"><a href="/registerRoute" style="text-decoration:none;color:  rgb(238, 235, 237);">Sign Up</a></button>
+        </div>
+    </div>
+    
+    <section id="stats" style="margin-bottom:-10px">
+        <div class="container" style="height:50%">
+            <div class="stat">
+                <div class="stat-value">10K</div>
+                <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">50+</div>
+                <div class="stat-label">Delivery Partners</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">300+</div>
+                <div class="stat-label">Locations Served</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">4.7+</div>
+                <div class="stat-label">Customer Ratings</div>
+            </div>
+        </div>
+    </section>
+</div>  
+    <%- include('footer') %>
+    
+</body>
+</html>

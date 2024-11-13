@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account</title>
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+.account-container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.account-container h1 {
+    font-size: 38px;
+    color: #34495e;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.account-container h2 {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.account-container p {
+    font-size: 20px;
+    color: #7f8c8d;
+    margin: 10px 0;
+}
+
+.action-buttons {
+    margin: 30px 0;
+}
+
+.action-buttons a {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    margin: 12px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons a:hover {
+    transform: translateY(-4px);
+    background-color: #2980b9;
+}
+
+.action-buttons a.delete-account {
+    background-color: #e74c3c;
+}
+
+.action-buttons a.delete-account:hover {
+    background-color: #c0392b;
+}
+
+    </style>
+</head>
+<body>
+    <div class="account-container">
+        <h1>Welcome,<%= user.username %></h1>
+
+        <h2>Your Details:</h2>
+        <p><strong>Username:</strong> <%= user.username %></p>
+        <p><strong>Email:</strong><%= user.email_id %></p>
+        <p><strong>Address:</strong> <%= user.city %></p>
+        <p><strong>Phone No:</strong><%= user.phone_no %></p>
+    
+
+        <div class="action-buttons">
+            <a href="/userAccount/update-details/<%= user.user_id %>">Update Details</a>
+            <a href="/userAccount/change-password/<%= user.user_id %>">Change Password</a>
+            <a href="/userAccount/delete-account/<%= user.user_id %>">Delete Account</a>
+            <a href="/userLogin/logout">Logout</a>
+        </div>
+         
+    </div>
+    
+        
+</body>
+</html>

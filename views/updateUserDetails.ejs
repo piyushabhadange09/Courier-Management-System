@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Account</title>
+    <link rel="stylesheet" href="/path_to_your_stylesheet.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .update-form {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+
+        .update-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .update-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .update-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .update-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .update-form button:hover {
+            background-color: #218838;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .register-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="update-form">
+        <h2>Update Your Details</h2>
+        <form action="/userAccount/update-details/<%= user.user_id %>" method="POST"> <!-- Assuming user_id is passed in -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="<%= user.username %>" required>
+
+            <label for="email_id">Email ID:</label>
+            <input type="email" id="email_id" name="email_id" value="<%= user.email_id %>" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" value="<%= user.city %>" required>
+
+            <label for="phone_no">Phone Number:</label>
+            <input type="text" id="phone_no" name="phone_no" value="<%= user.phone_no %>" required>
+
+            <button type="submit">Update Details</button>
+        </form>
+
+        <div class="register-link">
+            <p>Back to <a href="/userAccount/<%= user.user_id %>">Account Details</a></p>
+        </div>
+    </div>
+</body>
+</html>

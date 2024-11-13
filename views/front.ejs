@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Courier Management System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/front.css">
+</head>
+<body>
+
+  <!-- Include the header -->
+  <%- include('header.ejs') %>
+
+<div class="front">
+
+
+  <div class="container-fluid text-center main-container" style="margin-top: 0px">
+    <div class="intro-class">
+        <h2><span class="highlight">Swift, Secure, Seamless </span><span class="main-moto">Deliver Your Packages with Confidence - Join Our Courier Service Today!</span></h2>
+        <p class="normal-text" style="font-size: 27px">Welcome to our Courier Management System, where every delivery becomes a breeze! Connect with friends, family, and businesses in real-time through our intuitive platform. Whether you’re sending a package or tracking a shipment, we offer seamless service with powerful features designed to enhance your delivery experience. Dive in and discover the ultimate way to manage your courier needs.</p>
+        
+        <div class="buttons-div">
+            <button class="login" role="button"><a href="/login" style="text-decoration: none; color: rgb(238, 235, 237);">Login</a></button>
+            <button class="login" role="button"><a href="/regsister" style="text-decoration: none; color:rgb(238, 235, 237);">Register</a></button>
+        </div>
+    </div>
+    
+    <div class="intro-section-main">
+
+   
+    <div class="intro-section">
+        <div class="intro-text">
+            <h1>Stay Updated with Your Shipments</h1>
+            <p class="normal-text" style="font-size: 26px">With our Courier Management System, tracking your deliveries is effortless and informative. You can monitor your shipments and receive real-time updates every step of the way.</p>
+        </div>
+        <div class="intro-img">
+            <img src="/IMG/shipping.png" alt="Shipping Image">
+        </div>
+    </div>
+
+    <div class="intro-section" style="margin: 30px 50px">
+        <div class="intro-img" style="margin-left: 60px; margin-right: 30px">
+            <img src="/IMG/delivery.png" alt="Manage Deliveries">
+        </div>
+        <div class="intro-text" style="margin-top: 0px; margin-left: 40px">
+            <h1>Manage Your Deliveries with Ease</h1>
+            <p class="normal-text" style="font-size: 26px">At our Courier Service, we understand that every package is important. Our platform empowers you to manage your deliveries efficiently, ensuring that your items reach their destination safely and on time.</p>
+        </div>
+    </div>
+    
+    <div class="more-about">
+        <button class="button-89" style="font-size: 20px" role="button"><a href="/aboutRoute" style="text-decoration: none; color: black;">More About Our Services</a></button>
+    </div>
+</div>
+</div>
+
+<div class="carousel-wrapper reviews-container">
+    <h1 class="bold-text">Customer Reviews</h1>
+    <div class="carousel-container">
+        <div class="carousel-item">
+            <div class="user-info">
+                <div class="circle">JD</div>
+                <div class="user-name">John Doe</div>
+            </div>
+            
+            <div class="user-review">
+                <p>"The courier service has been fantastic! My packages always arrive on time, and the tracking feature is incredibly helpful."</p>
+            </div>
+            <div class="user-rating">
+                <p>4.5 🌟🌟🌟🌟⭐</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="user-info">
+                <div class="circle">SM</div>
+                <div class="user-name">Sarah Miller</div>
+            </div>
+            
+            <div class="user-review">
+                <p>"I love how easy it is to send packages with this service. The customer support is always ready to help!"</p>
+            </div>
+            <div class="user-rating">
+                <p>5.0 🌟🌟🌟🌟🌟</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="user-info">
+                <div class="circle">LM</div>
+                <div class="user-name">Lisa Mark</div>
+            </div>
+           
+            <div class="user-review">
+                <p>"I appreciate the reliability of this courier service. My packages always arrive in perfect condition!"</p>
+            </div>
+            <div class="user-rating">
+                <p>4.8 🌟🌟🌟🌟⭐</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="user-info">
+                <div class="circle">RG</div>
+                <div class="user-name">Raj Gupta</div>
+            </div>
+            
+            <div class="user-review">
+                <p>"The tracking system is top-notch! I always know where my package is, which gives me peace of mind."</p>
+            </div>
+            <div class="user-rating">
+                <p>5.0 🌟🌟🌟🌟🌟</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="social-media">
+    <div class="bold-text">
+        <h2>Stay Connected with Us!</h2>
+    </div>
+    <div>
+        <a href="https://www.facebook.com" target="_blank">
+            <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <i class="fab fa-twitter fa-2x" style="color: #55acee;"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram fa-2x" style="color: #ac2bac;"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+            <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i>
+        </a>
+    </div>
+
+    <div class="bold-text" style="margin-bottom: 20px;">
+        <button class="button-89" style="font-size: 20px" role="button"><a href="/ContactRoute" style="color: black; text-decoration: none; padding: 0px 10px">Contact Us</a></button>
+    </div>
+</div>
+
+</div>
+  
+
+  <%- include('footer.ejs') %>
+  <script src="/public/JS/front.js"></script>
+</body>
+</html>

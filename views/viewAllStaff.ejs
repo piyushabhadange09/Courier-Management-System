@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Staff List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        thead {
+            background-color: #003366;
+            color: #ffffff;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #e6f2ff;
+        }
+
+        tbody tr:hover {
+            background-color: #b3d9ff;
+            cursor: pointer;
+        }
+
+        tbody td {
+            color: #003366;
+        }
+
+        th {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Delivery Staff</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Organization Name</th>
+                <th>Staff ID</th>
+                <th>Staff Name</th>
+                <th>Staff City</th>
+                <th>Staff Contact</th>
+                <th>Staff Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% staffList.forEach(function(staff) { %>
+                <tr>
+                    <td><%= staff.org_name %></td>
+                    <td><%= staff.staff_id %></td>
+                    <td><%= staff.staff_name %></td>
+                    <td><%= staff.staff_city %></td>
+                    <td><%= staff.staff_contact %></td>
+                    <td><%= staff.staff_email %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

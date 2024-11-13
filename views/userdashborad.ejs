@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+.dashboard {
+    background-color: #ffffff; /* White background for the dashboard */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    color: #4A90E2; /* Blue color for main heading */
+    text-align: center;
+}
+
+.user-details, .package-details {
+    margin: 20px 0;
+}
+
+h3 {
+    color: #D5006D; /* Pink color for section headings */
+    border-bottom: 2px solid #D5006D; /* Underline effect */
+    padding-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dddddd; /* Light gray border */
+}
+
+th {
+    background-color: #4A90E2; /* Blue background for header */
+    color: white; /* White text color for header */
+}
+
+td {
+    background-color: #f9f9f9; /* Light gray for table cells */
+}
+
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4CAF50; /* Green background for buttons */
+    color: white; /* White text for buttons */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 0 10px; /* Space between buttons */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.logout-button {
+    background-color: #f44336; /* Red background for logout button */
+}
+
+.logout-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+.update-button {
+    background-color: #2196F3; /* Blue background for update button */
+}
+
+.update-button:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}
+
+/* navbar css */
+.user-navbar {
+    background-color: #4A90E2; /* Blue background */
+    padding: 15px 20px; /* Padding around the navbar */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space below the navbar */
+}
+
+.user-navbar ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Vertically center items */
+}
+
+.user-navbar li {
+    margin: 0 15px; /* Space between links */
+}
+
+.user-navbar a {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.user-navbar a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+.right-nav {
+    margin-left: auto; /* Push the right-nav to the right */
+    display: flex; /* Align Profile and Logout in a row */
+}
+</style>
+</head>
+<body>
+    <nav class="user-navbar">
+        <ul>
+          <li><a href="/orderDetails">Order Details</a></li>
+          <li><a href="/orderParcel">Order Parcel</a></li>
+          <li><a href="/complaints">Complaints</a></li>
+          <li><a href="/deliveryPartner">Delivery Partner</a></li>
+          
+          
+          <div class="right-nav">
+            <li><a href="/userAccount/<%= user.user_id %>">Profile</a></li>
+            <li><a href="/userLogin/logout">Logout</a></li>
+          </div>
+        </ul>
+    </nav>
+  <div class="dashboard">
+    <h2>User Dashboard</h2>
+    <div class="user-details">
+      <h3>Your Details</h3>
+      <table>
+        <tr>
+          <th>Field</th>
+          <th>Information</th>
+        </tr>
+        <tr>
+          <td>Username</td>
+          <td><%= user.username %></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td><%= user.city %></td>
+        </tr>
+        <tr>
+          <td>Contact Number</td>
+          <td><%= user.phone_no %></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><%= user.email_id %></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="package-details">
+      <h3>Your Package Details</h3>
+      <table>
+        <tr>
+          <th>Package ID</th>
+          <th>Description</th>
+          <th>Status</th>
+        </tr>
+          <tr>
+            <td>PCK123</td>
+            <td>Electronics - Laptop</td>
+            <td>In Transit</td>
+          </tr>
+      </table>
+    </div>
+    
+    <div class="button-group">
+      <a href="/userAccount/<%= user.user_id %>"><button class="update-button">Update Details</button></a>
+      <a href="/userLogin/logout"><button class="logout-button">Logout</button></a>
+    </div>
+  </div>
+
+</body>
+</html>

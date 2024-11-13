@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Branch</title>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #add8e6, #b0e0e6); /* Light blue gradient */
+        margin: 0;
+        padding: 40px 20px; /* Increase padding on top and bottom */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+        color: #333;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+        max-width: 450px;
+        width: 100%;
+        transition: transform 0.3s ease;
+        margin-top: auto;
+        margin-bottom: auto; /* Ensures the form remains centered with extra spacing */
+      }
+
+      form:hover {
+        transform: scale(1.02); /* Slight scale effect on hover */
+      }
+
+      div {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #444; /* Softer label color */
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #add8e6; /* Light blue border */
+        border-radius: 6px;
+        font-size: 16px;
+        background-color: #f0f8ff; /* Very light blue background */
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="tel"]:focus {
+        border-color: #4682b4; /* Darker blue on focus */
+        outline: none;
+        box-shadow: 0 4px 12px rgba(70, 130, 180, 0.3); /* Light blue shadow on focus */
+        background-color: #e6f7ff; /* Slightly darker blue when focused */
+      }
+
+      button[type="submit"] {
+        background: linear-gradient(135deg, #4682b4, #87ceeb); /* Gradient with blue tones */
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #5cacee; /* Darker sky blue on hover */
+        transform: translateY(-3px);
+      }
+
+      button[type="submit"]:active {
+        transform: translateY(0);
+      }
+
+      /* Style for the <li><a> element */
+      li {
+        list-style-type: none;
+        margin-top: 20px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: #4682b4;
+        font-weight: 600;
+        padding: 12px 20px;
+        border: 1px solid #4682b4;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      a:hover {
+        background-color: #4682b4;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/orgLogin/branches" method="POST">
+      <div>
+        <label for="orgName">Organization Name:</label>
+        <input type="text" id="orgName" name="orgName" required />
+      </div>
+      <div>
+        <label for="branchId">Branch ID:</label>
+        <input type="text" id="branchId" name="branchId" required />
+      </div>
+      <div>
+        <label for="branchCity">Branch City:</label>
+        <input type="text" id="branchCity" name="branchCity" required />
+      </div>
+      <div>
+        <label for="branchState">Branch State:</label>
+        <input type="text" id="branchState" name="branchState" required />
+      </div>
+      <div>
+        <label for="branchEmail">Branch Email:</label>
+        <input type="email" id="branchEmail" name="branchEmail" required />
+      </div>
+      <div>
+        <label for="branchContact">Branch Contact:</label>
+        <input type="tel" id="branchContact" name="branchContact" pattern="[0-9]{10}" required />
+      </div>
+      <div>
+        <button type="submit">Add Branch</button>
+      </div>
+      <li><a href="/orgLogin/ViewBranches">View All Branches</a></li>
+    </form>
+  </body>
+</html>

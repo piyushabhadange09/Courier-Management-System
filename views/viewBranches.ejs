@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branch List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #004080;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        thead {
+            background-color: #004080;
+            color: #ffffff;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #e6f2ff;
+        }
+
+        tbody tr:hover {
+            background-color: #cce5ff;
+            cursor: pointer;
+        }
+
+        tbody td {
+            color: #004080;
+        }
+
+        th {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Branches</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Organization Name</th>
+                <th>Branch ID</th>
+                <th>Branch City</th>
+                <th>Branch State</th>
+                <th>Branch Email</th>
+                <th>Branch Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% branches.forEach(function(branch) { %>
+                <tr>
+                    <td><%= branch.org_name %></td>
+                    <td><%= branch.branch_id %></td>
+                    <td><%= branch.branch_city %></td>
+                    <td><%= branch.branch_state %></td>
+                    <td><%= branch.branch_email %></td>
+                    <td><%= branch.branch_contact %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

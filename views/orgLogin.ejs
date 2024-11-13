@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organization Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1E90FF, #87CEFA);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  color: #1E90FF;
+  font-size: 1.8rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  width: 100%;
+}
+
+input:focus {
+  border-color: #1E90FF;
+  outline: none;
+}
+
+button {
+  padding: 15px;
+  background-color: #1E90FF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0E76A8;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.register-link a {
+  color: #1E90FF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+</style>
+<body>
+
+  <div class="login-form">
+    <h2>Organization Login</h2>
+    <form action="/orgLogin" method="POST">
+      <label for="org_name">Organization Name:</label>
+      <input type="text" id="org_name" name="org_name" placeholder="Enter Organization Name" required>
+
+      <label for="org_email">Organization Email:</label>
+      <input type="email" id="org_email" name="org_email" placeholder="Enter Organization Email" required>
+
+      <label for="org_password">Organization Password:</label>
+      <input type="password" id="org_password" name="org_password" placeholder="Enter Organization Password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="register-link">
+      <p>Not registered? <a href="/orgRegsister">Register here</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

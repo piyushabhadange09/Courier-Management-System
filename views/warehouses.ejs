@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warehouse Management</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #cce7ff, #99c2ff); /* Soft blue gradient */
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366; /* Dark blue */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+            max-width: 450px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #003366; /* Dark blue */
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #99c2ff; /* Light blue border */
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: #e6f2ff; /* Very light blue background */
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #0056b3; /* Darker blue on focus */
+            outline: none;
+            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3); /* Blue shadow on focus */
+            background-color: #f0f8ff; /* Slightly lighter blue when focused */
+        }
+
+        button[type="submit"] {
+            background: linear-gradient(135deg, #0056b3, #007bff); /* Gradient with blue tones */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #007bff; /* Brighter blue on hover */
+            transform: translateY(-3px);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+        /* Style for the <li><a> element */
+        li {
+            list-style-type: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0056b3; /* Dark blue */
+            font-weight: 600;
+            padding: 12px 20px;
+            border: 1px solid #0056b3; /* Dark blue border */
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3; /* Dark blue on hover */
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Add Warehouse Section -->
+        <div class="form-container">
+            <form action="/orgLogin/warehouse" method="POST">
+                <h2>Add Warehouse</h2>
+                <div>
+                    <label for="orgName">Organization Name:</label>
+                    <input type="text" id="orgName" name="orgName" required />
+                </div>
+                <div>
+                    <label for="warehouseId">Warehouse ID:</label>
+                    <input type="text" id="warehouseId" name="warehouseId" required />
+                </div>
+                <div>
+                    <label for="capacity">Warehouse Capacity:</label>
+                    <input type="number" id="capacity" name="capacity" required />
+                </div>
+                <div>
+                    <label for="state">Warehouse State:</label>
+                    <input type="text" id="state" name="state" required />
+                </div>
+                <div>
+                    <label for="city">Warehouse City:</label>
+                    <input type="text" id="city" name="city" required />
+                </div>
+                <button type="submit">Add Warehouse</button>
+                <li><a href="/orgLogin/viewWarehouses">View All Warehouses</a></li>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

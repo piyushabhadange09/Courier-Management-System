@@ -1,0 +1,162 @@
+.about body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light grey background */
+    margin: 0;
+    padding: 0px;
+}
+.about{
+    margin: 0px 40px;
+    margin-top: -20px;
+}
+.about .about-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #FF5722; /* Bright orange */
+    color: white;
+}
+
+.about .about-info p {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about .about-info h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.about .about-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+}
+
+.about .short-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.about .short-card:hover {
+    transform: translateY(-5px);
+}
+
+.about .short-card-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about .short-card h1 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #FF5722; /* Matching the theme color */
+}
+
+.about .vs-ms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.about .mission-text, .vision-text {
+    max-width: 800px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.about .intro-img {
+    margin: 20px 0;
+}
+
+.about .intro-img img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.about .about-data {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #FFAB40; /* Lighter orange */
+    color: #333;
+}
+
+.about .about-data p {
+    font-size: 30px;
+    margin: 0px 0;
+}
+.about .about-data span{
+    font-size: 40px;
+}
+.about .buttons-div {
+    margin: 20px 0;
+}
+
+.about .login {
+    background-color: #FF5722; /* Bright orange */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px; /* Space between buttons */
+}
+
+.about .login:hover {
+    background-color: #E64A19; /* Darker orange on hover */
+}
+
+.about #stats {
+    background-color: #FF5722; /* Bright orange */
+    color: white;
+    padding: 40px 0;
+}
+
+.about .container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between stats */
+}
+
+.about .stat {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 120px; /* Minimum width for stat boxes */
+}
+
+.about .stat-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FF5722; /* Matching the theme color */
+}
+
+.about .stat-label {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about .about-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .stat {
+        min-width: auto; /* Allow full width for smaller screens */
+        flex: 1; /* Allow equal width distribution */
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Sending History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0066cc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        thead {
+            background-color: #0066cc;
+            color: #ffffff;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #e6f2ff;
+        }
+
+        tbody tr:hover {
+            background-color: #cce5ff;
+            cursor: pointer;
+        }
+
+        tbody td {
+            color: #0066cc;
+        }
+
+        th {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Parcel Sending History</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Username</th>
+                <th>Organization Name</th>
+                <th>Parcel ID</th>
+                <th>Parcel Quantity</th>
+                <th>Parcel Cost</th>
+                <th>Parcel Description</th>
+                <th>Warehouse ID</th>
+                <th>Delivery Staff</th>
+                <th>Order Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% parcels.forEach(function(parcel) { %>
+                <tr>
+                    <td><%= parcel.user_id %></td>
+                    <td><%= parcel.username %></td>
+                    <td><%= parcel.org_name %></td>
+                    <td><%= parcel.parcel_id %></td>
+                    <td><%= parcel.parcel_qty %></td>
+                    <td><%= parcel.parcel_cost %></td>
+                    <td><%= parcel.parcel_description %></td>
+                    <td><%= parcel.warehouse_id %></td>
+                    <td><%= parcel.delivery_staff %></td>
+                    <td><%= parcel.order_date %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
